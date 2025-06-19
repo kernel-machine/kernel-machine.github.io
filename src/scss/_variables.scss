@@ -13,11 +13,11 @@ $z-index-tab-controller: 95;
 $z-index-loader: 99999;
 
 /** Bootstrap Colors **/
-$primary: #265817;
-$dark: #102b08;
+$primary: #31572c;
+$dark: #132a13;
 $success: #06c203;
 $danger: #d91c1c;
-$light: #fcfcfc;
+$light: #90a955;
 
 /** Layout Colors **/
 $default-section-background: #f1eff3;
@@ -25,7 +25,7 @@ $loader-background: #102b08;
 $text-default-color: #140f29;
 
 /** Nav Colors **/
-$nav-background: #102b08;
+$nav-background: #132a13;
 $nav-background-selected: lighten($nav-background, 5%);
 $nav-avatar-border-color: lighten($nav-background, 10%);
 $nav-highlight: lighten($primary, 30%);
