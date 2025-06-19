@@ -1,42 +1,47 @@
 <template>
     <div class="project-modal-content">
         <!-- Title -->
-        <h1 class="mb-2 fw-bold"
-            v-html="localize(item.locales, 'title')"/>
+        <h1 class="mb-2 fw-bold" v-html="localize(item.locales, 'title')" />
+
+        <!-- authors -->
+        <p><a v-for="(a, i) in item._authors" :key="a">
+                <u v-if="a.toLowerCase().includes('giovannesi')">{{ a }}</u>
+                <i v-else>{{ a }}</i>
+                <i v-if="i < item._authors.length - 1">, </i>
+            </a></p>
+
+            <b v-if="item._category.includes('journal')">Published in: </b>
+        <b v-else>Presented at: </b>
+        <p v-if="item._where">{{ item._where }}</p>
 
         <!-- Tags -->
-        <div v-if="parsedTags && parsedTags.length"
-             class="tags-wrapper text-3 mt-2 mt-lg-3">
+        <div v-if="parsedTags && parsedTags.length" class="tags-wrapper text-3 mt-2 mt-lg-3">
             <span class="d-none d-lg-inline">
-                <i class="fa-solid fa-tag opacity-75"/>
-                {{localizeFromStrings("tags")}}:
+                <i class="fa-solid fa-tag opacity-75" />
+                {{ localizeFromStrings("tags") }}:
             </span>
 
-            <Tags class="mt-1 mt-lg-0" :tags="parsedTags"/>
+            <Tags class="mt-1 mt-lg-0" :tags="parsedTags" />
         </div>
 
         <!-- Blocks -->
         <template v-for="block in blocks">
             <div v-if="block.visibility" class="project-modal-content-block">
                 <h5 :class="block.titleClass">
-                    <i :class="`${block.titleFaIcon}`"/>
-                    <span v-html="block.title"/>
+                    <i :class="`${block.titleFaIcon}`" />
+                    <span v-html="block.title" />
                 </h5>
 
-                <p class="text-3 mb-0" v-html="block.description"/>
+                <p class="text-3 mb-0" v-html="block.description" />
 
-                <SocialLinks v-if="block.links"
-                             :items="block.links"
-                             class="social-links"
-                             size="2"
-                             variant="dark"/>
+                <SocialLinks v-if="block.links" :items="block.links" class="social-links" size="2" variant="dark" />
             </div>
         </template>
     </div>
 </template>
 
 <script setup>
-import {computed, inject} from "vue"
+import { computed, inject } from "vue"
 import Tags from "/src/vue/components/widgets/Tags.vue"
 import SocialLinks from "/src/vue/components/widgets/SocialLinks.vue"
 
@@ -56,7 +61,7 @@ const localizeFromStrings = inject("localizeFromStrings")
 
 const parsedTags = computed(() => {
     const tags = localize(props.item.locales, "tags")
-    if(Array.isArray(tags))
+    if (Array.isArray(tags))
         return tags
     return []
 })
@@ -82,11 +87,13 @@ const blocks = computed(() => {
             titleFaIcon: "fa-solid fa-globe",
             description: localizeFromStrings("where_to_find_description")
                 .replace("{project}", `<b>${localize(props.item.locales, "title")}</b>`),
-            links: links.map((link) => {return {
-                href: link.href,
-                faIcon: link.faIcon,
-                id: link.stringKey
-            }})
+            links: links.map((link) => {
+                return {
+                    href: link.href,
+                    faIcon: link.faIcon,
+                    id: link.stringKey
+                }
+            })
         }
     ]
 })
@@ -97,6 +104,7 @@ const blocks = computed(() => {
 
 div.project-modal-content {
     width: 100%;
+
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         text-align: center;
     }
@@ -121,6 +129,7 @@ div.tags-wrapper {
 
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         flex-direction: column;
+
         span {
             margin-bottom: 8px;
         }
@@ -138,6 +147,7 @@ div.project-modal-content-block {
         min-width: 25px;
         margin-right: 5px;
         text-align: center;
+
         @include media-breakpoint-down(md) {
             min-width: 0;
         }

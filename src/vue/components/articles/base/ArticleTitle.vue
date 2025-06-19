@@ -7,7 +7,6 @@
                class="ms-2"
                :class="faIcon"/>
         </h3>
-
         <div v-if="description"
              class="article-description">
             <p class="eq-h6 mb-0 text-light-6" v-html="description"/>

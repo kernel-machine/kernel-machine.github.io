@@ -13,7 +13,7 @@
                     "id": 1,
                     "dateStart": {"year": 2016, "month": 9},
                     "dateEnd": {"year": 2020, "month": 10},
-                    "img": "images/places/logo-sapienza.jpg",
+                    "img": "images/pictures/sapienza-logo.jpg",
                     "fallbackFaIcon": null,
                     "fallbackFaIconColor": null,
 
@@ -32,7 +32,7 @@
                     "id": 2,
                     "dateStart": {"year": 2020, "month": 9},
                     "dateEnd": {"year": 2023, "month":7},
-                    "img": "images/places/logo-sapienza.jpg",
+                    "img": "images/pictures/sapienza-logo.jpg",
                     "fallbackFaIcon": null,
                     "fallbackFaIconColor": null,
 

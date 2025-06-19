@@ -13,6 +13,9 @@ export default class ArticleItem {
         this._locales = new Locales(data.locales || {})
         this._links = data.links || []
         this._category = data['category']
+        this._authors = data['authors']
+        this._year = data["year"]
+        this._where = data["where"]
     }
 
     /** @return {String} */

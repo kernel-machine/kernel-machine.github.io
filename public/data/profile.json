@@ -18,8 +18,8 @@
                     "value": "Via Ariosto 25",
                     "valueShort": "Roma, Italy"
                 }
-            }
-        },
+        }
+    },
         {
             "id": "email",
             "value": "giovannesi@diag.uniroma1.it",
@@ -36,10 +36,10 @@
         },
         {
             "id": "linkedin",
-            "value": "@roy.sheppard.official",
-            "valueShort": "@roy.sheppard.official",
+            "value": "Luca Giovannesi",
+            "valueShort": "Luca Giovannesi",
             "faIcon": "fa-brands fa-linkedin",
-            "href": "https://linkedin.com"
+            "href": "https://www.linkedin.com/in/luca-giovannesi-b54b57290/"
         }
     ]
 }

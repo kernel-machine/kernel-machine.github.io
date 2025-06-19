@@ -42,7 +42,8 @@ const selectedCategoryId = ref(defaultCategoryId)
 const refreshTimes = ref(0)
 
 const items = computed(() => {
-    return props.model.items
+    props.model.items.sort(a=>a._year)
+    return props.model.items.reverse()
 })
 
 const filteredItems = computed(() => {
@@ -130,13 +131,13 @@ div.items-grid {
 
     --gap: 10px;
     --margin-top: 30px;
-    --grid-template: repeat(4, 1fr);
+    --grid-template: repeat(3, 1fr);
 
     @media (min-width: 1800px) {
-        --grid-template: repeat(5, 1fr);
+        --grid-template: repeat(3, 1fr);
     }
     @media (max-width: 1470px) {
-        --grid-template: repeat(4, 1fr);
+        --grid-template: repeat(3, 1fr);
     }
     @media (max-width: 1150px) {
         --grid-template: repeat(3, 1fr);
