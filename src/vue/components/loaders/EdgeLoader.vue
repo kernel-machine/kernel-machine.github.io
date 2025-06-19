@@ -108,8 +108,8 @@ export default {
 }
 
 .pi-board {
-  width: 500px;
-  height: 320px;
+  width: 40vw;
+  height: auto;
 }
 
 .board {

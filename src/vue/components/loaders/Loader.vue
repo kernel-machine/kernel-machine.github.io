@@ -11,6 +11,7 @@
         <div class="resume-loader-content">
             <EdgeLoader/>
             
+            <!--
             <ImageView src="images/icons/resume.ico"
                        alt="Logo"
                        class="image-view-logo"
@@ -20,6 +21,7 @@
                        @completed="_onLogoLoaded"
                        :spinner-enabled="false"
                        :resolve-path="true"/>
+        -->
         
             <div class="resume-loader-progress-display"
                  :class="{
@@ -80,6 +82,7 @@ const loadingTimeAfterRendering = ref(0)
 onMounted(() => {
     scheduler.clearAllWithTag(schedulerTag)
     _performTransition()
+    _onLogoLoaded()
 })
 
 watch(() => props.visible, () => {

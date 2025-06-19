@@ -1,5 +1,5 @@
 {
-    "preloaderEnabled": false,
+    "preloaderEnabled": true,
     "navToggleEnabled": true,
     "supportedLanguages": [
         {
