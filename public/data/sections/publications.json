@@ -23,7 +23,7 @@
                     "category": "conference",
                     "authors":["Luca Giovannesi","Gabriele Proietti Mattia","Roberto Beraldi"],
                     "year":2024,
-                    "where":"Advanced Information Networking and Applications",
+                    "where":"Advanced Information Networking and Applications, Kitakyushu, Japan (Remotely)",
                     "locales": {
                         "en": {
                             "title": "Targeted and Automatic Deep Neural Networks Optimization for Edge Computing",
