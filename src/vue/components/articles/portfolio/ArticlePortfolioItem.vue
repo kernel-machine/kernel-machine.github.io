@@ -22,7 +22,7 @@
             <div class="portfolio-item-description-wrapper">
                 <button class="portfolio-item-title"
                         v-html="localize(item.locales, 'title')"/>
-                <p><a v-for="(a,i) in item._authors" :key="a">
+                <p class="portfolio-item-author"><a v-for="(a,i) in item._authors" :key="a">
                     <u v-if="a.toLowerCase().includes('giovannesi')">{{ a }}</u>
                     <i v-else>{{ a }}</i>
                     <i v-if="i < item._authors.length -1">, </i>
@@ -237,6 +237,16 @@ div.portfolio-item-content-wrapper {
         padding: 0;
         color: $light-7!important;
         font-size: calc(var(--base-title-size)*0.73 * var(--proportion));
+        margin: 0;
+        @include media-breakpoint-up(lg) {
+            margin-top: 2px;
+        }
+    }
+
+        p.portfolio-item-author {
+        padding: 0;
+        color: $light-7!important;
+        font-size: calc(var(--base-title-size)*0.85 * var(--proportion));
         margin: 0;
         @include media-breakpoint-up(lg) {
             margin-top: 2px;
