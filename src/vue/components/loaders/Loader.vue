@@ -9,6 +9,8 @@
          }">
         <!-- Loader Content -->
         <div class="resume-loader-content">
+            <EdgeLoader/>
+            
             <ImageView src="images/icons/resume.ico"
                        alt="Logo"
                        class="image-view-logo"
@@ -18,7 +20,7 @@
                        @completed="_onLogoLoaded"
                        :spinner-enabled="false"
                        :resolve-path="true"/>
-
+        
             <div class="resume-loader-progress-display"
                  :class="{
                     'resume-loader-progress-display-hidden': currentStep <  Steps.ANIMATING_PROGRESS,
@@ -40,6 +42,7 @@ import {useScheduler} from "/src/composables/scheduler.js"
 import ImageView from "/src/vue/components/widgets/ImageView.vue"
 import ProgressBar from "/src/vue/components/widgets/ProgressBar.vue"
 import {useUtils} from "/src/composables/utils.js"
+import EdgeLoader from "./EdgeLoader.vue"
 
 const scheduler = useScheduler()
 const utils = useUtils()
