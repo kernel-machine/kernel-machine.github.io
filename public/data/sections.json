@@ -12,24 +12,6 @@
                     "title_short": "Welcome!",
                     "description": null,
                     "nav_label": "About"
-                },
-                "es": {
-                    "title": "¡Bienvenido a *mi CV!*",
-                    "title_short": "Bienvenido!",
-                    "description": null,
-                    "nav_label": "Acerca de"
-                },
-                "fr": {
-                    "title": "Bienvenue sur *mon CV!*",
-                    "title_short": "Bienvenue !",
-                    "description": null,
-                    "nav_label": "À propos"
-                },
-                "zh": {
-                    "title": "欢迎来到我的*简历！*",
-                    "title_short": "欢迎！",
-                    "description": null,
-                    "nav_label": "关于"
                 }
             }
         },
@@ -46,24 +28,6 @@
                     "title_short": null,
                     "description": "A glimpse into my academic trajectory and accomplishments.",
                     "nav_label": "Education"
-                },
-                "es": {
-                    "title": "Antecedentes *Educativos*",
-                    "title_short": null,
-                    "description": "Un vistazo a mi trayectoria académica y logros.",
-                    "nav_label": "Educación"
-                },
-                "fr": {
-                    "title": "Parcours *Éducatif*",
-                    "title_short": null,
-                    "description": "Un aperçu de mon parcours académique et de mes réalisations.",
-                    "nav_label": "Éducation"
-                },
-                "zh": {
-                    "title": "*教育* 背景",
-                    "title_short": null,
-                    "description": "一瞥我的学术轨迹和成就。",
-                    "nav_label": "教育背景"
                 }
             }
         },
@@ -114,24 +78,6 @@
                     "title_short": null,
                     "description": "A look into my work experience and career journey.",
                     "nav_label": "Experience"
-                },
-                "es": {
-                    "title": "Experiencia *Profesional*",
-                    "title_short": null,
-                    "description": "Un vistazo a mi experiencia laboral y trayectoria profesional.",
-                    "nav_label": "Experiencia"
-                },
-                "fr": {
-                    "title": "Expérience *Professionnelle*",
-                    "title_short": null,
-                    "description": "Un aperçu de mon expérience professionnelle et de mon parcours de carrière.",
-                    "nav_label": "Expérience"
-                },
-                "zh": {
-                    "title": "*专业* 经验",
-                    "title_short": null,
-                    "description": "了解我的工作经验和职业之旅。",
-                    "nav_label": "工作经历"
                 }
             }
         },

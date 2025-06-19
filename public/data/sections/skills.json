@@ -532,123 +532,30 @@
                 {
                     "id": 1,
                     "dateStart": null,
-                    "img": "images/flags/en-us.png",
+                    "img": "images/flags/it.png",
+                    "fallbackFaIcon": null,
+                    "fallbackFaIconColor": null,
+                    "percentage": null,
+                    "locales": {
+                        "en": {
+                            "title": "Italian",
+                            "description": "Native speaker with excellent communication and writing skills.",
+                            "level": "Native"
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "dateStart": null,
+                    "img": "images/flags/en-uk.png",
                     "fallbackFaIcon": null,
                     "fallbackFaIconColor": null,
                     "percentage": null,
                     "locales": {
                         "en": {
                             "title": "English",
-                            "description": "Native speaker with excellent communication and writing skills.",
-                            "level": "Native"
-                        },
-                        "es": {
-                            "title": "Inglés",
-                            "description": "Hablante nativo con excelentes habilidades de comunicación y escritura.",
-                            "level": "Nativo"
-                        },
-                        "fr": {
-                            "title": "Anglais",
-                            "description": "Locuteur natif avec d'excellentes compétences en communication et en écriture.",
-                            "level": "Langue maternelle"
-                        },
-                        "zh": {
-                            "title": "英语",
-                            "description": "母语人士，具有出色的沟通和写作能力。",
-                            "level": "母语"
-                        }
-                    }
-                },
-
-                {
-                    "id": 2,
-                    "dateStart": null,
-                    "img": "images/flags/es.png",
-                    "fallbackFaIcon": null,
-                    "fallbackFaIconColor": null,
-                    "percentage": null,
-                    "locales": {
-                        "en": {
-                            "title": "Spanish",
-                            "description": "Fluent in both spoken and written Spanish; confident in professional communication.",
+                            "description": "Fluent in both spoken and written English; confident in professional communication.",
                             "level": "Fluent"
-                        },
-                        "es": {
-                            "title": "Español",
-                            "description": "Fluido en español hablado y escrito; seguro en la comunicación profesional.",
-                            "level": "Fluido"
-                        },
-                        "fr": {
-                            "title": "Espagnol",
-                            "description": "Courant à la fois à l'oral et à l'écrit en espagnol ; confiant dans la communication professionnelle.",
-                            "level": "Courant"
-                        },
-                        "zh": {
-                            "title": "西班牙语",
-                            "description": "流利的西班牙语口语和书写能力；自信地进行专业沟通。",
-                            "level": "流利"
-                        }
-                    }
-                },
-
-                {
-                    "id": 3,
-                    "dateStart": null,
-                    "img": "images/flags/vi.png",
-                    "fallbackFaIcon": null,
-                    "fallbackFaIconColor": null,
-                    "percentage": null,
-                    "locales": {
-                        "en": {
-                            "title": "Vietnamese",
-                            "description": "Intermediate proficiency in Vietnamese language; can hold conversations and understand written text.",
-                            "level": "Intermediate"
-                        },
-                        "es": {
-                            "title": "Vietnamita",
-                            "description": "Competencia intermedia en el idioma vietnamita; puede mantener conversaciones y comprender texto escrito.",
-                            "level": "Intermedio"
-                        },
-                        "fr": {
-                            "title": "Vietnamien",
-                            "description": "Compétence intermédiaire en vietnamien ; peut tenir des conversations et comprendre un texte écrit.",
-                            "level": "Intermédiaire"
-                        },
-                        "zh": {
-                            "title": "越南语",
-                            "description": "具有中等水平的越南语能力；能进行对话并理解书面文字。",
-                            "level": "中级"
-                        }
-                    }
-                },
-
-                {
-                    "id": 4,
-                    "dateStart": null,
-                    "img": "images/flags/pt-br.png",
-                    "fallbackFaIcon": null,
-                    "fallbackFaIconColor": null,
-                    "percentage": null,
-                    "locales": {
-                        "en": {
-                            "title": "Brazilian Portuguese",
-                            "description": "Basic understanding of Brazilian Portuguese; learning and improving.",
-                            "level": "Beginner"
-                        },
-                        "es": {
-                            "title": "Portugués Brasileño",
-                            "description": "Comprensión básica del portugués brasileño; aprendiendo y mejorando.",
-                            "level": "Principiante"
-                        },
-                        "fr": {
-                            "title": "Portugais Brésilien",
-                            "description": "Compréhension de base du portugais brésilien ; en cours d'apprentissage et d'amélioration.",
-                            "level": "Débutant"
-                        },
-                        "zh": {
-                            "title": "巴西葡萄牙语",
-                            "description": "对巴西葡萄牙语有基本的理解；正在学习和改进。",
-                            "level": "初学者"
                         }
                     }
                 }
