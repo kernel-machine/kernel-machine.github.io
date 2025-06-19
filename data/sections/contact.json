@@ -1,0 +1,15 @@
+{
+    "articles": [
+
+        {
+            "id": 1,
+            "component": "ArticleContactOptions",
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc",
+                "contact_ids": ["address", "phone", "email", "linkedin", "facebook", "github"]
+            },
+            "items": null
+        }
+    ]
+}

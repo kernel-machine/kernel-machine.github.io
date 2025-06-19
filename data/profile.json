@@ -1,0 +1,45 @@
+{
+    "name": "Luca Giovannesi",
+    "profilePictureUrl": "images/pictures/avatar.jpg",
+
+    "locales": {
+        "en": {
+            "credits": " ",
+            "role": "PhD Student"
+        }    
+    },
+    "contactOptions": [
+        {
+            "id": "address",
+            "faIcon": "fa-regular fa-map",
+            "href": null,
+            "locales": {
+                "en": {
+                    "value": "Via Ariosto 25",
+                    "valueShort": "Roma, Italy"
+                }
+        }
+    },
+        {
+            "id": "email",
+            "value": "giovannesi@diag.uniroma1.it",
+            "valueShort": "giovannesi@diag.uniroma1.it",
+            "faIcon": "fa-regular fa-envelope",
+            "href": "mailto:giovannesi@diag.uniroma1.it"
+        },
+        {
+            "id": "github",
+            "value": "@kernel-machine",
+            "valueShort": "@kernel-machine",
+            "faIcon": "fa-brands fa-github",
+            "href": "https://github.com/kernel-machine"
+        },
+        {
+            "id": "linkedin",
+            "value": "Luca Giovannesi",
+            "valueShort": "Luca Giovannesi",
+            "faIcon": "fa-brands fa-linkedin",
+            "href": "https://www.linkedin.com/in/luca-giovannesi-b54b57290/"
+        }
+    ]
+}

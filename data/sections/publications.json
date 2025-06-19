@@ -1,0 +1,91 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticlePortfolio",
+            "locales": {
+                "en": {
+                    "title": null,
+                    "category_all": "All",
+                    "category_conference": "Conference",
+                    "category_journal": "Journal"
+                }
+            },
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "fallbackFaIcon": "",
+                    "fallbackFaIconColor": null,
+                    "category": "conference",
+                    "authors":["Luca Giovannesi","Gabriele Proietti Mattia","Roberto Beraldi"],
+                    "year":2024,
+                    "where":"Advanced Information Networking and Applications",
+                    "locales": {
+                        "en": {
+                            "title": "Targeted and Automatic Deep Neural Networks Optimization for Edge Computing",
+                            "description": "DNNs, commonly employed for complex tasks such as image and language processing, are increasingly sought for deployment on Internet of Things (IoT) devices. These devices operate with constrained resources, including limited computational power, memory, slower processors, and restricted energy requirements. Consequently, optimizing DNN models becomes crucial to minimize memory usage and computational time. However, traditional optimization methods require skilled professionals to manually fine-tune hyperparameters, striking a balance between efficiency and accuracy. This paper introduces an innovative solution for identifying optimal hyperparameters, focusing on the application of pruning, clusterization, and quantization.",
+                            "tags": []
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-solid fa-link",
+                            "href": "https://doi.org/10.1007/978-3-031-57931-8_6",
+                            "stringKey": "open_paper"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "fallbackFaIcon": "",
+                    "fallbackFaIconColor": null,
+                    "category": "journal",
+                    "authors":["Luca Giovannesi","Gabriele Proietti Mattia","Roberto Beraldi"],
+                    "year":2024,
+                    "where":"Software Impacts",
+                    "locales": {
+                        "en": {
+                            "title": "OptDNN: Automatic deep neural networks optimizer for edge computing",
+                            "description": "DNNs are widely used for complex tasks like image and signal processing, and they are in increasing demand for implementation on Internet of Things (IoT) devices. For these devices, optimizing DNN models is a necessary task. Generally, standard optimization approaches require specialists to manually fine-tune hyper-parameters to find a good trade-off between efficiency and accuracy. In this paper, we propose OptDNN, a software that employs innovative and automatic approaches to determine optimal hyper-parameters for pruning, clustering, and quantization. The models optimized by OptDNN have a smaller memory footprint, faster inference time, and a similar accuracy to the original models.",
+                            "tags": []
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-solid fa-link",
+                            "href": "https://doi.org/10.1016/j.simpa.2024.100641",
+                            "stringKey": "open_paper"
+                        }
+                    ]
+                },
+                 {
+                    "id": 3,
+                    "fallbackFaIcon": "",
+                    "fallbackFaIconColor": null,
+                    "category": "conference",
+                    "authors":["Luca Giovannesi","Paolo Russo","Roberto Beraldi"],
+                    "where":"Agriculture-Vision Workshop at CVPR 2025, Nashville, TN, USA",
+                    "year":2025,
+                    "locales": {
+                        "en": {
+                            "title": "Vit4V: a Video Classification Method for the Detection of Varroa Destructor from Honeybees",
+                            "description": "The Varroa destructor mite poses a critical threat to global honey bee populations, contributing to colony collapse through parasitic infestation. Current detection methods rely on labor-intensive visual inspections, which are prone to human error and impractical for large-scale monitoring. To address this, we present Vit4V, a novel deep learning framework that leverages temporal information from video sequences to automate accurate Varroa detection. Unlike image-based approaches, Vit4V processes short video clips of forager bees, capturing subtle visual cues and mitigating challenges such as motion blur and occlusions. By aggregating predictions across multiple clips, our method achieves robust detection with 0.986 accuracy. We also introduce the Varroa Destructor Video Dataset, a real-world dataset comprising 607 videos of infected and healthy bees, collected in an active beehive using an embedded camera system. The dataset, designed in collaboration with entomologists, is publicly released to facilitate further research. Experimental results demonstrate the capability of our approach, which offers a scalable, non-invasive solution for early infestation detection. Vit4V can potentially reduce reliance on harmful chemical treatments, empowering beekeepers to implement timely interventions and reduce colony losses. Our work bridges a critical gap in precision beekeeping, providing a practical tool with implications for ecological sustainability.",
+                            "tags": []
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-solid fa-link",
+                            "href": "https://openaccess.thecvf.com/content/CVPR2025W/V4A/html/Giovannesi_Vit4V_a_Video_Classification_Method_for_the_Detection_of_Varroa_CVPRW_2025_paper.html",
+                            "stringKey": "open_paper"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

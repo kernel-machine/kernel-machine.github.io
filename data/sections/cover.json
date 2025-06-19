@@ -1,0 +1,34 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticleProfile",
+            "locales": {},
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc",
+                "contact_list_ids": ["address", "email", "phone"],
+                "contact_circles_ids": ["instagram", "facebook", "linkedin", "github"]
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "locales": {
+                        "en": {
+                            "description": "I am a PhD student in the <strong>Engineering in Computer Science</strong> program at Sapienza University of Rome."
+                        }
+                    }
+                },
+
+                {
+                    "id": 2,
+                    "locales": {
+                        "en": {
+                            "description": "My research primarily focuses on developing <strong>energy-efficient solutions for edge devices.</strong>"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

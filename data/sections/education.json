@@ -1,0 +1,54 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticleTimeline",
+            "locales": {},
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "desc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "dateStart": {"year": 2016, "month": 9},
+                    "dateEnd": {"year": 2020, "month": 10},
+                    "img": "images/pictures/sapienza-logo.jpg",
+                    "fallbackFaIcon": null,
+                    "fallbackFaIconColor": null,
+
+                    "locales": {
+                        "en": {
+                            "title": "Bachelor's in Engineering in Computer Science",
+                            "description": " ",
+                            "province": "",
+                            "country": "Italy",
+                            "institution": "Sapienza, University of Rome",
+                            "tags": []
+                        }                       
+                    }
+                },
+                {
+                    "id": 2,
+                    "dateStart": {"year": 2020, "month": 9},
+                    "dateEnd": {"year": 2023, "month":7},
+                    "img": "images/pictures/sapienza-logo.jpg",
+                    "fallbackFaIcon": null,
+                    "fallbackFaIconColor": null,
+
+                    "locales": {
+                        "en": {
+                            "title": "Master's in Enginnering in Computer Science",
+                            "description": " ",
+                            "province": "",
+                            "country": "Italy",
+                            "institution": "Sapienza, University of Rome",
+                            "tags": []
+                        }
+
+                      }
+                }
+            ]
+        }
+    ]
+}
