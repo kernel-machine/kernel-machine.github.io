@@ -37,14 +37,14 @@
             "id": "portfolio",
             "categoryId": "showcase",
             "jsonPath": "/sections/publications.json",
-            "faIcon": "fa-solid fa-folder-open",
+            "faIcon": "fa-solid fa-file-lines",
             "type": "column",
             "locales": {
                 "en": {
                     "title": "My *Publications*",
                     "title_short": null,
                     "description": "Explore a selection of my publications.",
-                    "nav_label": "Portfolio"
+                    "nav_label": "Publications"
                 }
             }
         },
