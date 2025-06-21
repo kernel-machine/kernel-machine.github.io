@@ -47,6 +47,26 @@
                         }
 
                       }
+                },
+                 {
+                    "id": 3,
+                    "dateStart": {"year": 2024, "month": 9},
+                    "dateEnd": {"year": 2027, "month":9},
+                    "img": "images/pictures/sapienza-logo.jpg",
+                    "fallbackFaIcon": null,
+                    "fallbackFaIconColor": null,
+
+                    "locales": {
+                        "en": {
+                            "title": "PhD in Enginnering in Computer Science",
+                            "description": "At Alcor Lab under the supervision of Prof. Roberto Beraldi",
+                            "province": "",
+                            "country": "Italy",
+                            "institution": "Sapienza, University of Rome",
+                            "tags": []
+                        }
+
+                      }
                 }
             ]
         }
