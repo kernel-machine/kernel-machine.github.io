@@ -29,7 +29,7 @@ const localizeFromStrings = inject("localizeFromStrings")
 
 const contactLinks = computed(() => {
     const contactIds = props.model.getSetting("contact_ids", [])
-    return contactIds.map(contactId => {
+    return contactIds.filter(contactId => contactId !== "address").map(contactId => {
         return profile.value.getContactOptionWithId(contactId)
     }).filter(contact => Boolean(contact)).map(item => {
         return {
