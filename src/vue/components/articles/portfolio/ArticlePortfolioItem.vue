@@ -3,7 +3,7 @@
          :class="`portfolio-item-${transitionStatus}`"
          @click="_onClick">
         <div class="portfolio-item-content-wrapper">
-            <div  v-if="item.img" class="portfolio-item-icon-wrapper">
+            <div v-if="item.img || item.fallbackFaIcon" class="portfolio-item-icon-wrapper">
                 <IconView class="portfolio-icon-view"
                           ref="iconView"
                           :img="item?.img"
@@ -22,13 +22,13 @@
             <div class="portfolio-item-description-wrapper">
                 <button class="portfolio-item-title"
                         v-html="localize(item.locales, 'title')"/>
-                <p class="portfolio-item-author"><a v-for="(a,i) in item._authors" :key="a">
+                <p v-if="item._authors && item._authors.length" class="portfolio-item-author"><a v-for="(a,i) in item._authors" :key="a">
                     <u v-if="a.toLowerCase().includes('giovannesi')">{{ a }}</u>
                     <i v-else>{{ a }}</i>
                     <i v-if="i < item._authors.length -1">, </i>
                 </a></p>
-                <p class="portfolio-item-category">{{ item._year }}</p>
-                <p class="portfolio-item-category"
+                <p v-if="item._year" class="portfolio-item-category">{{ item._year }}</p>
+                <p v-if="categoryName" class="portfolio-item-category"
                    v-html="categoryName"/>
             </div>
         </div>

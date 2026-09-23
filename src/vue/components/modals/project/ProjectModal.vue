@@ -10,7 +10,7 @@
             <!-- Icon -->
             <IconView class="project-modal-icon-view"
                       ref="iconView"
-                      v-if="item.img"
+                      v-if="item.img || item.fallbackFaIcon"
                       :img="item?.img"
                       :fa-icon="item?.fallbackFaIcon"
                       :background-color="item?.fallbackFaIconColor"

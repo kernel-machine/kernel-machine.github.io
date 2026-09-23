@@ -4,15 +4,22 @@
         <h1 class="mb-2 fw-bold" v-html="localize(item.locales, 'title')" />
 
         <!-- authors -->
-        <p><a v-for="(a, i) in item._authors" :key="a">
+        <p v-if="item._authors && item._authors.length"><a v-for="(a, i) in item._authors" :key="a">
                 <u v-if="a.toLowerCase().includes('giovannesi')">{{ a }}</u>
                 <i v-else>{{ a }}</i>
                 <i v-if="i < item._authors.length - 1">, </i>
             </a></p>
 
-            <b v-if="item._category.includes('journal')">Published in: </b>
-        <b v-else>Presented at: </b>
-        <p v-if="item._where">{{ item._where }}</p>
+        <!-- year for projects -->
+        <p v-if="item._year && (!item._authors || !item._authors.length)" class="text-muted fw-bold mb-2">
+            <i class="fa-regular fa-calendar-days me-1" /> {{ item._year }}
+        </p>
+
+        <template v-if="item._where">
+            <b v-if="item._category && item._category.includes('journal')">Published in: </b>
+            <b v-else>Presented at: </b>
+            <p>{{ item._where }}</p>
+        </template>
 
         <!-- Tags -->
         <div v-if="parsedTags && parsedTags.length" class="tags-wrapper text-3 mt-2 mt-lg-3">

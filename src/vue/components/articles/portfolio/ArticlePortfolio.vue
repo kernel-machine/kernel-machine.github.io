@@ -2,7 +2,8 @@
     <Article class="article-portfolio"
              :model="model">
         <div class="article-portfolio-content-wrapper">
-            <FilterTabs :categories="filterTabsCategories"
+            <FilterTabs v-if="categoryIds.length > 1"
+                        :categories="filterTabsCategories"
                         :selected-category-id="selectedCategoryId"
                         class="mt-lg-3"
                         @select="_onCategorySelected"/>
@@ -42,8 +43,12 @@ const selectedCategoryId = ref(defaultCategoryId)
 const refreshTimes = ref(0)
 
 const items = computed(() => {
-    props.model.items.sort(a=>a._year)
-    return props.model.items.reverse()
+    const list = [...props.model.items]
+    const hasYear = list.some(item => item._year)
+    if (hasYear) {
+        return list.sort((a, b) => (b._year || 0) - (a._year || 0))
+    }
+    return list
 })
 
 const filteredItems = computed(() => {
@@ -82,6 +87,7 @@ const filterTabsCategories = computed(() => {
 })
 
 const _getCategoryName = (categoryId) => {
+    if (!categoryId) return null
     return localize(props.model.locales, "category_" + categoryId)
 }
 
