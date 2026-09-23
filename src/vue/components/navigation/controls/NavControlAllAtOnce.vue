@@ -45,6 +45,14 @@ const spyScrollSection = ref(null)
 const isScrollingToTargetSection = ref(false)
 
 watch(() => canScroll.value, () => {_forceScrollToCurrentSection()})
+watch(() => currentSection.value, (newSection) => {
+    if(!didInitialize.value || !newSection)
+        return
+
+    if(spyScrollSection.value?.id !== newSection.id && !isScrollingToTargetSection.value) {
+        _forceScrollToSection(newSection, true)
+    }
+})
 watch(() => windowScrollY.value, () => { _spyScroll() })
 watch(() => windowWidth.value, () => { _onWindowSizeChanged() })
 watch(() => windowHeight.value, () => { _onWindowSizeChanged() })

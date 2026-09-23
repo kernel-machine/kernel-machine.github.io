@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import {inject, onMounted, provide, ref, watch} from "vue"
+import {inject, onMounted, onUnmounted, provide, ref, watch} from "vue"
 import {useScheduler} from "/src/composables/scheduler.js"
 import {useConstants} from "/src/composables/constants.js"
 
@@ -33,7 +33,15 @@ const previousSection = ref(null)
 const presentationMode = ref(constants.PresentationModes.NONE)
 const shouldResetScroll = ref(false)
 
-onMounted(() => _init())
+onMounted(() => {
+    _init()
+    document.addEventListener('click', _onDocumentClick)
+})
+
+onUnmounted(() => {
+    document.removeEventListener('click', _onDocumentClick)
+})
+
 watch(() => didLoadAllJsonFiles.value, () => _init())
 watch(() => windowHash.value, () => _onHashChanged())
 watch(() => isDesktopLayout.value, () => _onViewportChanged(true))
@@ -54,11 +62,13 @@ const navigateToSection = (section) => {
     if(!section)
         return
 
-    if(window.location.hash === '#' + section.urlHashId)
-        return
-
     section.category.lastVisitedSection = section
-    window.location.hash = section.urlHashId
+    previousSection.value = currentSection.value
+    currentSection.value = section
+
+    if(window.location.hash !== '#' + section.urlHashId) {
+        window.location.hash = section.urlHashId
+    }
 }
 
 /**
@@ -88,8 +98,32 @@ const _onHashChanged = () => {
         return
     }
 
-    previousSection.value = currentSection.value
-    currentSection.value = targetSection
+    if(currentSection.value?.id !== targetSection.id) {
+        previousSection.value = currentSection.value
+        currentSection.value = targetSection
+    }
+}
+
+const _onDocumentClick = (e) => {
+    const anchor = e.target.closest ? e.target.closest('a[href^="#"]') : null
+    if(!anchor)
+        return
+
+    const href = anchor.getAttribute('href')
+    if(!href || href === '#' || href.length <= 1)
+        return
+
+    const hash = href.replace('#', '')
+    const targetSection = sections.value?.find((section) => section.urlHashId === hash)
+    if(!targetSection)
+        return
+
+    e.preventDefault()
+    if(window.location.hash !== '#' + targetSection.urlHashId) {
+        navigateToSection(targetSection)
+    } else {
+        scrollToTopOfCurrentSection()
+    }
 }
 
 const _onViewportChanged = (showSpinner) => {
