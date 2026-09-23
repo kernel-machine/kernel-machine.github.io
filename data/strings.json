@@ -27,7 +27,11 @@
             "view_more_info": "View More Info",
             "view_on_app_store": "App Store",
             "view_on_google_play": "Google Play",
-            "view_on_windows_store": "Windows Store"
+            "view_on_windows_store": "Windows Store",
+            "github_repo": "GitHub Repository",
+            "open_live_demo": "Live Demo",
+            "open_paper": "Open Paper",
+            "projects": "Projects"
         }
     }
 }

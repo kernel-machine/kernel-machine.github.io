@@ -1,0 +1,111 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticlePortfolio",
+            "locales": {
+                "en": {
+                    "title": null
+                }
+            },
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "year": 2026,
+                    "fallbackFaIcon": "fa-solid fa-microchip",
+                    "fallbackFaIconColor": "#6f42c1",
+                    "locales": {
+                        "en": {
+                            "title": "DMX USB Interface (RP2040)",
+                            "description": "A dual-universe USB DMX interface based on the RP2040 microcontroller (Raspberry Pi Pico), emulating the industry-standard Enttec DMX USB Pro Mk2 protocol.<br><br><b>Key features:</b><ul><li><b>Enttec Pro Mk2 Emulation:</b> Native compatibility with major lighting software like QLC+ without requiring custom drivers.</li><li><b>Dual Universe Output:</b> Two full DMX-512 universes driven via MAX485 transceivers.</li><li><b>OLED Menu System:</b> Built-in SSD1306 display and 4-button physical interface for on-device configuration and status monitoring.</li><li><b>Standalone CUE Engine:</b> Record and store up to 10 dual-universe CUEs directly to onboard flash memory.</li><li><b>DMX Crossfading:</b> Smooth scene transitions with configurable fade times.</li><li><b>Smart Disconnect Behavior:</b> Configurable fallback modes upon USB loss (Blackout, Hold Last Value, or Play CUE).</li><li><b>Hardware Protection:</b> Galvanic isolation for safe operation in demanding stage and lighting environments.</li></ul>",
+                            "tags": [
+                                "RP2040",
+                                "Raspberry Pi Pico",
+                                "C++",
+                                "DMX-512",
+                                "QLC+",
+                                "Hardware",
+                                "Embedded"
+                            ]
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-brands fa-github",
+                            "href": "https://github.com/kernel-machine/dmx_interface_rp2040",
+                            "stringKey": "github_repo"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "year": 2026,
+                    "fallbackFaIcon": "fa-solid fa-sliders",
+                    "fallbackFaIconColor": "#0dcaf0",
+                    "locales": {
+                        "en": {
+                            "title": "MagicJS - QXW File Processor",
+                            "description": "Web application that automatically synchronizes LED colors on the Akai APC Mini MK2 MIDI controller with button colors configured in the QLC+ Virtual Console.<br><br><b>How it works:</b><ul><li><b>Workspace Analysis:</b> Parses QLC+ workspace files (.qxw) to extract button appearance and color definitions.</li><li><b>RGB Distance Matching:</b> Calculates the closest matching MIDI color for each button using RGB Euclidean distance.</li><li><b>Automatic Configuration:</b> Injects the appropriate MIDI parameters into the workspace to light up the hardware controller LEDs to match the software interface.</li><li><b>Configurable Behaviors:</b> Customizable brightness, button press responses, and LED blinking rates.</li><li><b>Client-Side Processing:</b> Runs entirely in the browser with no backend required.</li></ul>",
+                            "tags": [
+                                "JavaScript",
+                                "Web App",
+                                "QLC+",
+                                "Akai APC Mini Mk2",
+                                "MIDI",
+                                "Stage Lighting"
+                            ]
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-brands fa-github",
+                            "href": "https://github.com/kernel-machine/magicjs",
+                            "stringKey": "github_repo"
+                        },
+                        {
+                            "faIcon": "fa-solid fa-arrow-up-right-from-square",
+                            "href": "https://kernel-machine.github.io/magicjs/",
+                            "stringKey": "open_live_demo"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "year": 2022,
+                    "fallbackFaIcon": "fa-solid fa-compass",
+                    "fallbackFaIconColor": "#198754",
+                    "locales": {
+                        "en": {
+                            "title": "INAV Magnetometer Alignment Helper",
+                            "description": "Interactive web application built with Vue, Three.js, and Element Plus to simplify magnetometer sensor alignment in the INAV flight controller firmware for drones and RC aircraft.<br><br><b>Key features:</b><ul><li><b>Interactive 3D Visualization:</b> Renders a 3D drone/sensor model in real time using Three.js to visualize physical orientation changes.</li><li><b>Intuitive Orientation Sliders:</b> Easily adjust pitch, roll, and yaw angles until the 3D model orientation accurately reflects the physical board setup.</li><li><b>CLI Command Generator:</b> Automatically generates the required INAV CLI configuration commands ready to be pasted directly into INAV Configurator.</li><li><b>In-Browser Utility:</b> Runs entirely client-side with no installation required.</li></ul>",
+                            "tags": [
+                                "Vue.js",
+                                "Three.js",
+                                "INAV",
+                                "Drones",
+                                "3D Visualization",
+                                "Flight Controller"
+                            ]
+                        }
+                    },
+                    "links": [
+                        {
+                            "faIcon": "fa-brands fa-github",
+                            "href": "https://github.com/kernel-machine/INavMagAlignHelper",
+                            "stringKey": "github_repo"
+                        },
+                        {
+                            "faIcon": "fa-solid fa-arrow-up-right-from-square",
+                            "href": "https://kernel-machine.github.io/INavMagAlignHelper/",
+                            "stringKey": "open_live_demo"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

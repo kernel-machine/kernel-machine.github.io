@@ -49,6 +49,22 @@
             }
         },
 
+        {
+            "id": "projects",
+            "categoryId": "showcase",
+            "jsonPath": "/sections/projects.json",
+            "faIcon": "fa-solid fa-laptop-code",
+            "type": "column",
+            "locales": {
+                "en": {
+                    "title": "Featured *Projects*",
+                    "title_short": "Projects",
+                    "description": "A selection of open source hardware, firmware, and software tools I have developed.",
+                    "nav_label": "Projects"
+                }
+            }
+        },
+
 
         {
             "id": "contact",

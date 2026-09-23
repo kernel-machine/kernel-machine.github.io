@@ -27,6 +27,15 @@
                             "description": "My research primarily focuses on developing <strong>energy-efficient solutions for edge devices.</strong>"
                         }
                     }
+                },
+
+                {
+                    "id": 3,
+                    "locales": {
+                        "en": {
+                            "description": "In my spare time, I love tinkering with embedded hardware, electronics, and open-source software—from crafting custom <strong>DMX stage lighting devices</strong> to developing utilities for <strong>FPV drones</strong>. Check out some of my favorite builds in the <strong><a href=\"#projects\">Projects</a></strong> section!"
+                        }
+                    }
                 }
             ]
         }
