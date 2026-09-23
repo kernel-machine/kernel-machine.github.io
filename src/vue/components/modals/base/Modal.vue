@@ -94,22 +94,15 @@ const _onHidden = () => {
 @import "/src/scss/_theming.scss";
 
 div.modal {
-    background-color: rgba(11, 26, 19, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(black, 0.8)
 }
 
 div.modal-content {
-    background-color: #ffffff;
-    border-radius: 24px;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
-    overflow: hidden;
+    background-color: $light-1;
 
     &-bg-transparent {
         background-color: transparent;
         border: none;
-        box-shadow: none;
     }
 }
 
@@ -120,15 +113,8 @@ div.modal-custom-content {
 
 button.modal-close-button {
     position: absolute;
-    right: 16px;
-    top: 14px;
-    z-index: 10;
-    opacity: 0.6;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-
-    &:hover {
-        opacity: 1;
-        transform: scale(1.1);
-    }
+    right: 10px;
+    top: 5px;
+    z-index: 1;
 }
 </style>

@@ -17,9 +17,8 @@ hr.divider {
 
     padding: 0;
     margin: 0;
-    background: linear-gradient(90deg, $primary, lighten($primary, 15%));
+    background-color: lighten($primary, 10%);
     border: none;
-    border-radius: 9999px;
     opacity: 1;
 }
 </style>

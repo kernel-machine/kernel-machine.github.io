@@ -38,9 +38,8 @@ ul.inline-list {
 li.inline-list-item {
     margin-right: $spacing-between-items;
     &:not(:last-child)::after {
-        content: "·";
-        font-weight: bold;
-        opacity: 0.45;
+        content: "𐄁";
+        opacity: 0.4;
         margin-left: $spacing-between-items;
     }
 

@@ -25,29 +25,26 @@ ul.tags {
 
 li.tag-item {
     display: inline-flex;
-    background-color: rgba(5, 150, 105, 0.12);
-    color: #047857;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    border-radius: 9999px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 5px;
     text-transform: lowercase;
     white-space: nowrap;
     user-select: none;
-    transition: all 0.2s ease-out;
+    transition: 0.2s background-color ease-out;
 
     &:hover {
-        background-color: rgba(5, 150, 105, 0.22);
-        color: #065f46;
+        background-color: darken($primary, 15%);
     }
 
-    margin-right: 6px;
-    margin-bottom: 6px;
-    padding: 3px 12px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    padding: 3px 10px;
 
     @include media-breakpoint-down(md) {
-        margin-right: 4px;
-        margin-bottom: 4px;
-        padding: 2px 10px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        padding: 2px 8px;
     }
 }
 </style>

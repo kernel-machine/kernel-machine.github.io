@@ -135,29 +135,28 @@ div.article-portfolio-content-wrapper {
 div.items-grid {
     display: grid;
 
-    --gap: 20px;
+    --gap: 10px;
     --margin-top: 30px;
     --grid-template: repeat(3, 1fr);
 
     @media (min-width: 1800px) {
         --grid-template: repeat(3, 1fr);
-        --gap: 24px;
     }
     @media (max-width: 1470px) {
         --grid-template: repeat(3, 1fr);
-        --gap: 18px;
+    }
+    @media (max-width: 1150px) {
+        --grid-template: repeat(3, 1fr);
     }
     @include media-breakpoint-down(lg) {
         --margin-top: 25px;
     }
-    @media (max-width: 900px) {
-        --grid-template: repeat(2, 1fr);
-        --gap: 16px;
-    }
-    @media (max-width: 580px) {
-        --grid-template: 1fr;
-        --gap: 14px;
+    @media (max-width: 500px) {
+        --gap: 5px;
         --margin-top: 20px;
+    }
+    @media (max-width: 380px) {
+        --grid-template: repeat(2, 1fr);
     }
 
     gap: var(--gap);

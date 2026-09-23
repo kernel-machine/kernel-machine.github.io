@@ -5,7 +5,7 @@ $fa-font-path:"@fortawesome/fontawesome-free/webfonts";
 $min-contrast-ratio: 1.5 !default;
 
 /** Typography **/
-$font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-family-base: 'Saira', sans-serif;
 
 /** Z-Indexes **/
 $z-index-sidebar: 90;
@@ -13,25 +13,25 @@ $z-index-tab-controller: 95;
 $z-index-loader: 99999;
 
 /** Bootstrap Colors **/
-$primary: #059669;
-$dark: #0f172a;
-$success: #10b981;
-$danger: #ef4444;
-$light: #f8fafc;
+$primary: #275827;
+$dark: #1e411e;
+$success: #06c203;
+$danger: #d91c1c;
+$light: #90a955;
 
 /** Layout Colors **/
-$default-section-background: #f8fafc;
-$loader-background: #0b1a13;
-$text-default-color: #0f172a;
+$default-section-background: #f1eff3;
+$loader-background: #102b08;
+$text-default-color: #140f29;
 
 /** Nav Colors **/
-$nav-background: #0b1a13;
-$nav-background-selected: #0f231a;
-$nav-avatar-border-color: rgba(255, 255, 255, 0.15);
-$nav-highlight: #34d399;
-$nav-hover: #6ee7b7;
-$nav-selected: #10b981;
-$nav-contrast: #f8fafc;
+$nav-background: #132a13;
+$nav-background-selected: lighten($nav-background, 5%);
+$nav-avatar-border-color: lighten($nav-background, 10%);
+$nav-highlight: lighten($primary, 30%);
+$nav-hover: lighten($primary, 30%);
+$nav-selected: lighten($primary, 20%);
+$nav-contrast: #fcfcfc;
 $nav-contrast-90: rgba($nav-contrast, 0.9);
 $nav-contrast-80: rgba($nav-contrast, 0.8);
 $nav-contrast-70: rgba($nav-contrast, 0.7);
@@ -43,13 +43,13 @@ $nav-contrast-20: rgba($nav-contrast, 0.2);
 $nav-contrast-10: rgba($nav-contrast, 0.1);
 
 /** Light Shades **/
-$light-1: #f8fafc;
-$light-2: #f1f5f9;
-$light-3: #e2e8f0;
-$light-4: #cbd5e1;
-$light-5: #94a3b8;
-$light-6: #64748b;
-$light-7: #334155;
+$light-1: #f8f9fa;
+$light-2: #e9ecef;
+$light-3: #dee2e6;
+$light-4: #ced4da;
+$light-5: #adb5bd;
+$light-6: #6c757d;
+$light-7: #495057;
 
 $light-shades-palette: (
     $light-1,

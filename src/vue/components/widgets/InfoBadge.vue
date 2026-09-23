@@ -21,20 +21,17 @@ div.info-badge {
     align-items: center;
     justify-content: start;
 
-    background-color: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
-    border-radius: 9999px;
+    background-color: lighten($default-section-background, 3%);
+    border: 1px solid rgba(black, 0.1);
+    border-radius: $default-border-radius;
     white-space: nowrap;
 
-    padding: 5px 14px;
+    padding: 4px 12px;
     font-size: 0.8rem;
-    font-weight: 500;
-    color: #475569;
 
     i {
-        margin-right: 6px;
-        color: $primary;
+        margin-right: 5px;
+        color: $nav-background-selected;
     }
 
     span {

@@ -116,52 +116,36 @@ button.nav-sidebar-link {
     border: 0;
 
     text-transform: uppercase;
-    width: 240px;
+    width: 250px;
     text-align: left;
-    padding: 8px 14px;
-    border-radius: 12px;
-    letter-spacing: 0.04em;
-    font-size: 0.92rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
     i {
-        color: rgba(248, 250, 252, 0.45);
-        min-width: 36px;
+        color: $nav-contrast-10;
+        min-width: 45px;
         text-align: center;
-        transition: 0.2s color ease-in, transform 0.2s ease;
+        transition: 0.2s color ease-in;
     }
 
     span {
-        color: rgba(248, 250, 252, 0.72);
+        color: $nav-contrast-70;
         transition: 0.2s color ease-in;
     }
 }
 
 /** Hover Status **/
 button.nav-sidebar-link:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-
     i, span {
         color: $nav-hover!important;
-    }
-
-    i {
-        transform: translateX(2px);
     }
 }
 
 button.nav-sidebar-link-no-hover:hover {
-    background-color: transparent;
-
     i {
-        color: rgba(248, 250, 252, 0.45)!important;
+        color: $nav-contrast-10!important;
     }
 
     span {
-        color: rgba(248, 250, 252, 0.72)!important;
+        color: $nav-contrast-70!important;
     }
 }
 
@@ -169,17 +153,12 @@ button.nav-sidebar-link-no-hover:hover {
 li.nav-sidebar-link-li-container-selected {
     //pointer-events: none;
     button.nav-sidebar-link {
-        background-color: rgba(5, 150, 105, 0.18);
-        box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.35);
-
         i {
             color: $nav-highlight!important;
-            transform: scale(1.08);
         }
 
         span {
-            color: #ffffff!important;
-            font-weight: 600;
+            color: $nav-selected!important;
         }
     }
 }
