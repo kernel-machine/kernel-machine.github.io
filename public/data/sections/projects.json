@@ -72,38 +72,6 @@
                             "stringKey": "open_live_demo"
                         }
                     ]
-                },
-                {
-                    "id": 3,
-                    "year": 2022,
-                    "fallbackFaIcon": "fa-solid fa-compass",
-                    "fallbackFaIconColor": "#198754",
-                    "locales": {
-                        "en": {
-                            "title": "INAV Magnetometer Alignment Helper",
-                            "description": "Interactive web application built with Vue, Three.js, and Element Plus to simplify magnetometer sensor alignment in the INAV flight controller firmware for drones and RC aircraft.<br><br><b>Key features:</b><ul><li><b>Interactive 3D Visualization:</b> Renders a 3D drone/sensor model in real time using Three.js to visualize physical orientation changes.</li><li><b>Intuitive Orientation Sliders:</b> Easily adjust pitch, roll, and yaw angles until the 3D model orientation accurately reflects the physical board setup.</li><li><b>CLI Command Generator:</b> Automatically generates the required INAV CLI configuration commands ready to be pasted directly into INAV Configurator.</li><li><b>In-Browser Utility:</b> Runs entirely client-side with no installation required.</li></ul>",
-                            "tags": [
-                                "Vue.js",
-                                "Three.js",
-                                "INAV",
-                                "Drones",
-                                "3D Visualization",
-                                "Flight Controller"
-                            ]
-                        }
-                    },
-                    "links": [
-                        {
-                            "faIcon": "fa-brands fa-github",
-                            "href": "https://github.com/kernel-machine/INavMagAlignHelper",
-                            "stringKey": "github_repo"
-                        },
-                        {
-                            "faIcon": "fa-solid fa-arrow-up-right-from-square",
-                            "href": "https://kernel-machine.github.io/INavMagAlignHelper/",
-                            "stringKey": "open_live_demo"
-                        }
-                    ]
                 }
             ]
         }
