@@ -58,24 +58,35 @@ $texts-base-sizes: (
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+b, strong {
+    color: #0f172a;
+}
+
 a {
     text-decoration: none;
-    color: lighten($primary, 20%);
+    color: $primary;
+    transition: color 0.15s ease;
     &:hover {
-        color: lighten($primary, 15%);
+        color: darken($primary, 10%);
     }
 
     &.link-darkened {
         color: $primary;
         &:hover {
-            color: lighten($primary, 5%);
+            color: darken($primary, 10%);
         }
     }
 
     &.link-masked {
-        color: $light-7;
+        color: #475569;
         &:hover {
-            color: lighten($primary, 5%);
+            color: $primary;
         }
     }
 
@@ -88,4 +99,6 @@ a {
 
 p {
     font-family: $font-family-base;
+    line-height: 1.65;
+    color: #334155;
 }

@@ -27,9 +27,10 @@
                     <i v-else>{{ a }}</i>
                     <i v-if="i < item._authors.length -1">, </i>
                 </a></p>
-                <p v-if="item._year" class="portfolio-item-category">{{ item._year }}</p>
-                <p v-if="categoryName" class="portfolio-item-category"
-                   v-html="categoryName"/>
+                <div v-if="item._year || categoryName" class="portfolio-item-badges">
+                    <span v-if="item._year" class="badge-meta badge-year">{{ item._year }}</span>
+                    <span v-if="categoryName" class="badge-meta badge-category" v-html="categoryName"/>
+                </div>
             </div>
         </div>
     </div>
@@ -116,10 +117,20 @@ div.portfolio-item {
 
     width: 100%;
     height: 100%;
-    background-color: darken($default-section-background, 1%);
-    border-radius: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 22px;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.02);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+
     @include media-breakpoint-down(sm) {
-        border-radius: 15px;
+        border-radius: 16px;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: rgba(5, 150, 105, 0.35);
+        box-shadow: 0 16px 28px -4px rgba(15, 23, 42, 0.08), 0 6px 12px -4px rgba(15, 23, 42, 0.04);
     }
 }
 
@@ -134,11 +145,12 @@ div.portfolio-item-showing {
 
 @keyframes appear {
     from {
-        opacity:0;
-        transform: scale(0.8) translateY(30%);
+        opacity: 0;
+        transform: scale(0.92) translateY(20px);
     }
     to {
-        opacity:1
+        opacity: 1;
+        transform: scale(1) translateY(0);
     }
 }
 
@@ -146,19 +158,19 @@ div.portfolio-item-showing {
 div.portfolio-item-content-wrapper {
     --proportion: 0.9;
     --base-icon-size: 180px;
-    --base-title-size: 22px;
+    --base-title-size: 21px;
 
     @media (max-width: 2000px) {
         --proportion: 0.85;
-        --base-title-size: 23px;
+        --base-title-size: 22px;
     }
     @media (max-width: 1560px) {
         --proportion: 0.775;
-        --base-title-size: 24px;
+        --base-title-size: 22px;
     }
     @include media-breakpoint-down(xxl) {
         --proportion: 0.675;
-        --base-title-size: 25px;
+        --base-title-size: 23px;
     }
     @include media-breakpoint-down(lg) {
         --proportion: 0.7;
@@ -171,13 +183,15 @@ div.portfolio-item-content-wrapper {
     }
     @media (max-width: 500px) {
         --proportion: 0.45;
-        --base-title-size: 29px;
+        --base-title-size: 26px;
     }
 
     display: inline-flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     cursor: pointer;
-    margin: calc(30px * var(--proportion));
+    margin: calc(26px * var(--proportion));
 
     /** Icon View Wrapper **/
     div.portfolio-item-icon-wrapper {
@@ -187,10 +201,11 @@ div.portfolio-item-content-wrapper {
         overflow: hidden;
         user-select: none;
         pointer-events: none;
-        border-radius: 25%;
+        border-radius: 22%;
         aspect-ratio: 1/1;
         width: calc(var(--base-icon-size) * var(--proportion));
         height: calc(var(--base-icon-size) * var(--proportion));
+        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
     }
 
     /** Icon View **/
@@ -210,14 +225,23 @@ div.portfolio-item-content-wrapper {
 
         width: 100%;
         height: 100%;
-        border-radius: 25%;
+        border-radius: 22%;
 
-        background: fade-out(lighten($primary, 5%), 0.1);
-        transition: all ease-in-out 0.25s;
+        background: rgba(5, 150, 105, 0.85);
+        backdrop-filter: blur(2px);
+        transition: opacity 0.25s ease;
 
         &-content {
             color: $white;
         }
+    }
+
+    div.portfolio-item-description-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: calc(16px * var(--proportion));
     }
 
     /** Title **/
@@ -225,43 +249,80 @@ div.portfolio-item-content-wrapper {
         border: none;
         padding: 0;
         background-color: transparent;
-        color: $dark;
-        font-weight: bold;
+        color: #0f172a;
+        font-weight: 700;
         font-size: calc(var(--base-title-size) * var(--proportion));
-        margin-top: calc(19px * var(--proportion));
-        line-height: calc(var(--base-title-size) * var(--proportion));
-        margin-bottom: 3px;
+        line-height: 1.35;
+        margin-bottom: 6px;
+        text-align: center;
+        transition: color 0.2s ease;
     }
 
     p.portfolio-item-category {
         padding: 0;
-        color: $light-7!important;
-        font-size: calc(var(--base-title-size)*0.73 * var(--proportion));
+        color: #64748b !important;
+        font-size: calc(var(--base-title-size) * 0.73 * var(--proportion));
         margin: 0;
+        text-align: center;
         @include media-breakpoint-up(lg) {
             margin-top: 2px;
         }
     }
 
-        p.portfolio-item-author {
+    p.portfolio-item-author {
         padding: 0;
-        color: $light-7!important;
-        font-size: calc(var(--base-title-size)*0.85 * var(--proportion));
-        margin: 0;
-        @include media-breakpoint-up(lg) {
-            margin-top: 2px;
+        color: #64748b !important;
+        font-size: calc(var(--base-title-size) * 0.78 * var(--proportion));
+        line-height: 1.4;
+        margin: 0 0 6px 0;
+        text-align: center;
+
+        u {
+            text-decoration-color: $primary;
+            text-underline-offset: 3px;
+            font-weight: 600;
+            color: #334155;
+        }
+    }
+
+    div.portfolio-item-badges {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+
+        .badge-meta {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+        }
+
+        .badge-year {
+            background-color: rgba(5, 150, 105, 0.1);
+            color: #059669;
+        }
+
+        .badge-category {
+            background-color: #f1f5f9;
+            color: #475569;
         }
     }
 }
 
-div.portfolio-item-content-wrapper:hover {
+div.portfolio-item:hover {
     div.portfolio-item-thumb-overlay {
         opacity: 1;
     }
 
     button.portfolio-item-title {
-        color: lighten($primary, 10%);
-        transition: color ease-in-out 0.3s;
+        color: $primary;
     }
 }
 </style>
